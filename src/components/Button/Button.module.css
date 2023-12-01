@@ -1,0 +1,11 @@
+.button {
+    padding: 0.5rem;
+    border: 2px solid var(--warm-grey);
+    border-radius: 4px;
+    font-size: var(--font-size-lg);
+    cursor: pointer;
+}
+
+.button:focus {
+    border-color: var(--neutral-green);
+}

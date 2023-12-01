@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-cream);
+  font-family: 'Nunito', sans-serif;
+}
+
+:root {
+  --neutral-green: #B8B68F;
+  --warm-grey: #DBD3C6;
+  --light-cream: #EBE6D2;
+  --medium-cream: #DECCA6;
+  --dark-cream: #D0C0A7;
+
+  --font-size-sm: 0.8rem;
+  --font-size-md: 0.9rem;
+  --font-size-lg: 1rem;
+  --font-size-xl: 1.1rem;
+  --font-size-2xl: 1.3rem;
+  --font-size-3xl: 1.5rem;
+}

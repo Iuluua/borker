@@ -1,0 +1,33 @@
+.profileDetailsInputContainer {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.profileDetailsInputContainer .profileDetailsInput {
+    border: 0;
+    border-bottom: 2px solid var(--warm-grey);
+    outline: none;
+    font-size: var(--font-size-2xl);
+}
+
+.profileDetailsInputContainer .profileDetailsInput:focus {
+    border-bottom: 2px solid var(--neutral-green);
+}
+
+.profileDetailsInputContainer .profileDetailsLabel {
+    position: absolute;
+    left: 0;
+    cursor: text;
+    transition: .3s ease-in-out;
+}
+
+.profileDetailsLabelDoesntHaveText {
+    font-size: var(--font-size-xl);
+    top: 0;
+} 
+
+.profileDetailsLabelHasText {
+    font-size: var(--font-size-sm);
+    top: -25px;
+}
