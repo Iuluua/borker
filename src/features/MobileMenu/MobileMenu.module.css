@@ -22,3 +22,9 @@
     align-items: center;
     border-bottom: 3px solid var(--neutral-green);
 }
+
+@media only screen and (min-width: 768px) {
+    .mobileMenu {
+        display: none;
+    }
+}

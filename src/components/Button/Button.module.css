@@ -9,3 +9,7 @@
 .button:focus {
     border-color: var(--neutral-green);
 }
+
+.button:hover {
+    background-color: var(--warm-grey);
+}
