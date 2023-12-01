@@ -1,5 +1,6 @@
 import styles from "./MobileMenu.module.css";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 export const MobileMenu = ({ children }) => {
     const [isMenu, setIsMenu] = useState(false);
@@ -8,11 +9,11 @@ export const MobileMenu = ({ children }) => {
         <>
             <div className={styles.mobileMenu} onClick={() => setIsMenu(!isMenu)}></div>
             {isMenu && 
-            <div className={styles.mobileMenuContainer}>
-                <a href="#">Profile Page</a>
-                <a href="#">Home</a>
-                <a href="#">Logout/Login</a>
-            </div>}
+            <nav className={styles.mobileMenuContainer}>
+                <NavLink to="profilePageBrok" onClick={() => setIsMenu(false)}>Profile Page</NavLink>
+                <NavLink to="login" onClick={() => setIsMenu(false)}>Login</NavLink>
+                <NavLink to="register" onClick={() => setIsMenu(false)}>Register</NavLink>
+            </nav>}
             {!isMenu && children}
         </>
     );
