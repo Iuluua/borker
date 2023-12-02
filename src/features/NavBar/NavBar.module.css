@@ -3,23 +3,23 @@
     align-items: center;
     justify-content: flex-start;
     gap: 1rem;
-    padding: 1rem;
     background-color: var(--neutral-green);
-}
 
-.navBarContainer > a {
-    color: black;
-    text-decoration: none;
-    background-color: var(--neutral-green);
-}
+    & > a {
+        color: black;
+        text-decoration: none;
+        background-color: var(--neutral-green);
+        padding: 1rem;
+    }
 
-.navBarContainer > a:active {
-    color: var(--strong-green);
-    font-weight: bolder;
-}
+    & > a.active, a:hover {
+        color: var(--strong-green);
+        font-weight: bolder;
+    }
 
-.navBarContainer > .authButton {
-    margin-left: auto;
+    & > .authButton {
+        margin-left: auto;
+    }
 }
 
 @media only screen and (max-width: 768px) {
