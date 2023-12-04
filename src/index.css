@@ -14,7 +14,9 @@
   --light-cream: #EBE6D2;
   --medium-cream: #DECCA6;
   --dark-cream: #D0C0A7;
+  --error-color: #b50303;
 
+  --font-size-xs: 0.6rem;
   --font-size-sm: 0.8rem;
   --font-size-md: 0.9rem;
   --font-size-lg: 1rem;

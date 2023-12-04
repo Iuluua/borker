@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "email": "mirabel.indolenicul@gmail.com",
+      "password": "$2a$10$ioJX8euH9n1sdri3FvzFTeOuUHb/oQxAcsFs6RerO7s.Pdw7iLDji",
+      "firstName": "Mirabel",
+      "lastName": "Indolenicul",
+      "confirmPassword": "parola",
+      "id": 1
+    },
+    {
+      "email": "mirel.costea@gmail.com",
+      "password": "$2a$10$xM5Pz.9WL/mv/KY/asw7HOiqAJi9X4ICdxiQP6Q4Uf6UxxHgcIZBy",
+      "firstName": "Mirel",
+      "lastName": "Costea",
+      "confirmPassword": "parola",
+      "id": 2
+    },
+    {
+      "email": "maria.popa@gmail.com",
+      "password": "$2a$10$CyTWw6eksvd.vYzcEey62.alGC9i/VgYJntw2t4Z7jys5A63iRfgy",
+      "firstName": "Maria",
+      "lastName": "Popa",
+      "confirmPassword": "parola",
+      "id": 3
+    }
+  ]
+}

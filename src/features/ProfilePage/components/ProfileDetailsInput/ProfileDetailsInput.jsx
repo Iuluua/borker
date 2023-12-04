@@ -1,8 +1,8 @@
 import styles from "./ProfileDetailsInput.module.css";
-import { useState } from "react";
+import { forwardRef, useState } from "react";
 import clsx from "clsx";
 
-export const ProfileDetailsInput = ({ label, type, name, isFocused }) => {
+export const ProfileDetailsInput = forwardRef(({ label, type, name, isFocused, isError, errorMessage, ...props }, ref) => {
     const [hasText, setHasText] = useState(false);
 
     return (
@@ -11,8 +11,13 @@ export const ProfileDetailsInput = ({ label, type, name, isFocused }) => {
                 id={name}
                 type={type}
                 name={name}
-                className={styles.profileDetailsInput} 
-                onFocus={() => setHasText(true)} />
+                className={clsx({
+                    [styles.profileDetailsError]: isError,
+                    [styles.profileDetailsNonError]: !isError},
+                    styles.profileDetailsInput)} 
+                onFocus={() => setHasText(true)}
+                ref={ref}
+                {...props} />
             <label 
                 htmlFor={name}
                 className={clsx({
@@ -21,6 +26,7 @@ export const ProfileDetailsInput = ({ label, type, name, isFocused }) => {
                     styles.profileDetailsLabel)}>
                 {label}
             </label>
+            {isError && <p className={styles.errorMessage}>{errorMessage}</p>}
         </div>
     );
-}
+})

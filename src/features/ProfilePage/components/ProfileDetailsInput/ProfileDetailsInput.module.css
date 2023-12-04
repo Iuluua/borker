@@ -2,17 +2,34 @@
     position: relative;
     margin-top: 1rem;
     margin-bottom: 2rem;
+    height: 2.5rem;
+
+    & .errorMessage {
+        font-size: var(--font-size-xs);
+        color: var(--error-color);
+    }
 }
 
 .profileDetailsInputContainer .profileDetailsInput {
     border: 0;
-    border-bottom: 2px solid var(--warm-grey);
     outline: none;
     font-size: var(--font-size-2xl);
 }
 
-.profileDetailsInputContainer .profileDetailsInput:focus {
+.profileDetailsInputContainer .profileDetailsNonError {
+    border-bottom: 2px solid var(--warm-grey);
+}
+
+.profileDetailsInputContainer .profileDetailsNonError:focus {
     border-bottom: 2px solid var(--neutral-green);
+}
+
+.profileDetailsInputContainer .profileDetailsError {
+    border-bottom: 2px solid var(--error-color);
+}
+
+.profileDetailsInputContainer .profileDetailsError:focus {
+    border-bottom: 2px solid var(--error-color);
 }
 
 .profileDetailsInputContainer .profileDetailsLabel {
