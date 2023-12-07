@@ -16,12 +16,17 @@
     font-size: var(--font-size-2xl);
 }
 
-.profileDetailsInputContainer .profileDetailsNonError {
+.profileDetailsInputContainer .profileDetailsDefault {
     border-bottom: 2px solid var(--warm-grey);
 }
 
-.profileDetailsInputContainer .profileDetailsNonError:focus {
+.profileDetailsInputContainer .profileDetailsDefault:focus {
     border-bottom: 2px solid var(--neutral-green);
+}
+
+.profileDetailsInputContainer .profileDetailsReadOnly {
+    border-bottom: 2px solid var(--neutral-green);
+    cursor: default;
 }
 
 .profileDetailsInputContainer .profileDetailsError {

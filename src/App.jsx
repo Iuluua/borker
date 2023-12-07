@@ -6,22 +6,24 @@ import brokPicture from "./images/brok_profile_image.jpg";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { NavBar } from './features/NavBar/NavBar';
 import { MobileMenu } from './features/MobileMenu/MobileMenu';
+import { AuthContextProvider } from './features/Auth/AuthContext';
 
 function App() {
   return (
-    <BrowserRouter>
-      <NavBar />
-      <MobileMenu>
-        <Routes>
-          <Route path="login" element={<LoginPage />} />
-          <Route path="register" element={<RegisterPage />} />
-          <Route path="profilePageBrok" element={<ProfilePage name="Brok" imageUrl={brokPicture} />} />
-        </Routes>
-      </MobileMenu>
-    </BrowserRouter>
-    // <ProfilePage name="Brok" imageUrl={brokPicture} />
-    // <LoginPage />
-    // <RegisterPage />
+    <AuthContextProvider>
+      <BrowserRouter>
+        <NavBar />
+        <MobileMenu>
+          <Routes>
+            <Route path="login" element={<LoginPage />} />
+            <Route path="register" element={<RegisterPage />} />
+            <Route path="profile" element={<ProfilePage imageUrl={brokPicture} />} />
+            <Route path="/" element={<h1>Home</h1>} />
+            <Route path="*" element={<h1>Not Found</h1>} />
+          </Routes>
+        </MobileMenu>
+      </BrowserRouter>
+    </AuthContextProvider>
   );
 }
 

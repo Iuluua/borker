@@ -6,6 +6,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { loginSchema } from "../RegisterPage/AuthSchema";
+import { useAuthContext } from "../Auth/AuthContext";
 
 export const LoginPage = () => {
     const {
@@ -15,6 +16,8 @@ export const LoginPage = () => {
       } = useForm({
         resolver: yupResolver(loginSchema),
     });
+
+    const { login } = useAuthContext();
 
     const onSubmit = async (values) => {
         const data = await fetch(
@@ -41,6 +44,8 @@ export const LoginPage = () => {
         toast.success('You have logged in successfully.', {
             position: toast.POSITION.BOTTOM_RIGHT,
         });
+
+        login(data);
     }
 
     return (

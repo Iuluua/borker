@@ -17,8 +17,8 @@ export const RegisterPage = () => {
     });
 
     const onSubmit = async (values) => {
-        const { retypePassword, ...dataForServer } = values;
-
+        const { confirmPassword, ...dataForServer } = values;
+        
         const data = await fetch(
             "http://localhost:3000/register",
             {

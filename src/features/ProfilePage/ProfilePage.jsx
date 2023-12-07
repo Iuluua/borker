@@ -1,8 +1,11 @@
 import { Button } from "../../components/Button/Button";
+import { useAuthContext } from "../Auth/AuthContext";
 import styles from "./ProfilePage.module.css";
 import { ProfileDetails } from "./components/ProfileDetails/ProfileDetails";
 
-export const ProfilePage = ({ name, imageUrl }) => {
+export const ProfilePage = ({ imageUrl }) => {
+    const { user } = useAuthContext();
+
     return (
         <div className={styles.profilePageContainer}>
             <img 
@@ -10,7 +13,7 @@ export const ProfilePage = ({ name, imageUrl }) => {
                 alt="Not Found" 
                 className={styles.profilePicture} 
             />
-            <h1>{name}</h1>
+            <h1>{user.firstName}</h1>
             <div className={styles.profileDetails}>
                 <p>Personal Information</p>
                 <ProfileDetails />

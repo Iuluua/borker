@@ -10,7 +10,7 @@ export const MobileMenu = ({ children }) => {
             <div className={styles.mobileMenu} onClick={() => setIsMenu(!isMenu)}></div>
             {isMenu && 
             <nav className={styles.mobileMenuContainer}>
-                <NavLink to="profilePageBrok" onClick={() => setIsMenu(false)}>Profile Page</NavLink>
+                <NavLink to="profile" onClick={() => setIsMenu(false)}>Profile Page</NavLink>
                 <NavLink to="login" onClick={() => setIsMenu(false)}>Login</NavLink>
                 <NavLink to="register" onClick={() => setIsMenu(false)}>Register</NavLink>
             </nav>}
