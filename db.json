@@ -2,7 +2,9 @@
   "users": [
     {
       "email": "mirabel.indolenicul@gmail.com",
-      "password": "$2a$10$r367/P99anHuVMf4XglZJOsGP0OM8htJXUm/97PeSCnItgXJT9Mpe",
+      "password": "$2a$10$n5f8RxEekXTgs2osL6A8q.3kalCEDZJ8LkKqaKC39wdZH8QWI79d2",
+      "image": "blob:http://localhost:5173/3ff44d71-2578-479c-9fe0-44102b7f5c62",
+      "description": "I'm Mirabel",
       "firstName": "Mirabel",
       "lastName": "Indolenicul",
       "id": 1

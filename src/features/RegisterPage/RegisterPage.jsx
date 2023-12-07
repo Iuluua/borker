@@ -6,6 +6,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { registerSchema } from "./AuthSchema";
+import noImageAvailable from "../../images/NoImageAvailable.jpg";
 
 export const RegisterPage = () => {
     const {
@@ -17,7 +18,8 @@ export const RegisterPage = () => {
     });
 
     const onSubmit = async (values) => {
-        const { confirmPassword, ...dataForServer } = values;
+        const { confirmPassword, ...dataToSend } = values;
+        const dataForServer = {image: noImageAvailable, description: "", ...dataToSend};
         
         const data = await fetch(
             "http://localhost:3000/register",

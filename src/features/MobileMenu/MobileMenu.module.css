@@ -7,6 +7,11 @@
     cursor: pointer;
 }
 
+.mobileMenuGreeting {
+    margin-top: 1rem;
+    text-align: center;
+}
+
 .mobileMenuContainer {
     margin-top: 1rem;
     border-top: 3px solid var(--neutral-green);
