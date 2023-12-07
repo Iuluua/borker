@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form";
 import { useAuthContext } from "../Auth/AuthContext";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { editSchema } from "../RegisterPage/AuthSchema";
-import { useLocalStorageState } from "../../hooks/useLocalStorageState";
 import { useNavigate } from "react-router-dom";
 
 export const EditProfilePage = () => {
