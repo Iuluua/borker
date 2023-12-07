@@ -2,12 +2,30 @@
   "users": [
     {
       "email": "mirabel.indolenicul@gmail.com",
-      "password": "$2a$10$n5f8RxEekXTgs2osL6A8q.3kalCEDZJ8LkKqaKC39wdZH8QWI79d2",
-      "image": "blob:http://localhost:5173/3ff44d71-2578-479c-9fe0-44102b7f5c62",
+      "password": "$2a$10$ldFFZQHRA6x2cmSfaUVene3GjY8pegnTZQ3obQkVGkibN52/C6E9K",
+      "image": "blob:http://localhost:5173/d663b285-9bc4-46df-ab8b-3ce54f25dbee",
       "description": "I'm Mirabel",
       "firstName": "Mirabel",
       "lastName": "Indolenicul",
       "id": 1
+    },
+    {
+      "email": "mirel.baciu@gmail.com",
+      "password": "$2a$10$V1tpTAt67umM.UlyX.tQN.wUD3f5jhdoVAUf8yDG/v7vK5vMEjvLO",
+      "image": "blob:http://localhost:5173/bc30ab95-3060-4354-a8ea-5bfe3e06334f",
+      "description": "I'm Mirel Baciu",
+      "firstName": "Mirel",
+      "lastName": "Baciu",
+      "id": 2
+    },
+    {
+      "email": "pop@mail.com",
+      "password": "$2a$10$NkXWSXlvRVmTFteCuCULhOhYc6ra1RWJTjroigTh1SVGHVILfCP.O",
+      "image": "blob:http://localhost:5173/1c40eb2a-d623-4768-a877-7b8aa76c2ccc",
+      "description": "",
+      "firstName": "Maria",
+      "lastName": "Popa",
+      "id": 3
     }
   ]
 }

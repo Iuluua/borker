@@ -5,6 +5,8 @@ import { useForm } from "react-hook-form";
 import { useAuthContext } from "../Auth/AuthContext";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { editSchema } from "../RegisterPage/AuthSchema";
+import { useLocalStorageState } from "../../hooks/useLocalStorageState";
+import { useNavigate } from "react-router-dom";
 
 export const EditProfilePage = () => {
     const {
@@ -15,7 +17,9 @@ export const EditProfilePage = () => {
         resolver: yupResolver(editSchema),
     });
 
-    const { user } = useAuthContext();
+    const { user, logout } = useAuthContext();
+
+    const navigate = useNavigate();
 
     const onSubmit = async (values) => {
         const { image, ...valuesWithoutImage } = values;
@@ -34,6 +38,8 @@ export const EditProfilePage = () => {
             return data;
         })
         console.log(data);
+        logout();
+        navigate("/login");
     }
 
     return (
