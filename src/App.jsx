@@ -7,6 +7,7 @@ import { NavBar } from './features/NavBar/NavBar';
 import { MobileMenu } from './features/MobileMenu/MobileMenu';
 import { AuthContextProvider } from './features/Auth/AuthContext';
 import { EditProfilePage } from './features/EditProfilePage/EditProfilePage';
+import { HomePage } from './features/HomePage/HomePage';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
             <Route path="register" element={<RegisterPage />} />
             <Route path="profile" element={<ProfilePage />} />
             <Route path="profile/edit" element={<EditProfilePage />} />
-            <Route path="/" element={<h1>Home</h1>} />
+            <Route path="/" element={<HomePage />} />
             <Route path="*" element={<h1>Not Found</h1>} />
           </Routes>
         </MobileMenu>

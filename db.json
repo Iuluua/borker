@@ -11,21 +11,65 @@
     },
     {
       "email": "mirel.baciu@gmail.com",
-      "password": "$2a$10$V1tpTAt67umM.UlyX.tQN.wUD3f5jhdoVAUf8yDG/v7vK5vMEjvLO",
-      "image": "blob:http://localhost:5173/bc30ab95-3060-4354-a8ea-5bfe3e06334f",
-      "description": "I'm Mirel Baciu",
+      "password": "$2a$10$SO/4DpvTpKHGIPvwKHswUOq0YMOeCbfvGCrSBCCdaiIikCAhBhsPa",
+      "image": "/src/images/NoImageAvailable.jpg",
+      "description": "",
       "firstName": "Mirel",
-      "lastName": "Baciu",
+      "lastName": "Pop",
+      "id": 2
+    }
+  ],
+  "posts": [
+    {
+      "image": "/src/images/NoImageAvailable.jpg",
+      "description": "This is the first post",
+      "likes": 0,
+      "commentsIds": [1, 2],
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "image": "/src/images/NoImageAvailable.jpg",
+      "description": "This is the second post",
+      "likes": 0,
+      "commentsIds": [3, 4],
+      "userId": 2,
       "id": 2
     },
     {
-      "email": "pop@mail.com",
-      "password": "$2a$10$NkXWSXlvRVmTFteCuCULhOhYc6ra1RWJTjroigTh1SVGHVILfCP.O",
-      "image": "blob:http://localhost:5173/1c40eb2a-d623-4768-a877-7b8aa76c2ccc",
-      "description": "",
-      "firstName": "Maria",
-      "lastName": "Popa",
+      "image": "/src/images/NoImageAvailable.jpg",
+      "description": "This is the third post fshkjshdhskjghfkjdhhhhhhhhhhhhhhhhhhhhhhhh",
+      "likes": 0,
+      "commentsIds": [5],
+      "userId": 2,
       "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "text": "This is my comment - 1",
+      "userId": 2,
+      "id": 1
+    },
+    {
+      "text": "This is my comment - 2",
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "text": "This is my comment - 3",
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "text": "This is my comment - 4",
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "text": "This is my comment - 5",
+      "userId": 1,
+      "id": 5
     }
   ]
 }
