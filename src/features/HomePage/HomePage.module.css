@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 3rem;
+    row-gap: 3rem;
     padding: 3rem 6rem 3rem 6rem;
 }
 

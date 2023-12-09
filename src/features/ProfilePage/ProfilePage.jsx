@@ -16,6 +16,7 @@ export const ProfilePage = () => {
                 className={styles.profilePicture} 
             />
             <h1>{user.firstName}</h1>
+            <Button text="Add Post" onClick={() => navigate("/addPost")} />
             <div className={styles.profileDetails}>
                 <p>Personal Information</p>
                 <ProfileDetails />

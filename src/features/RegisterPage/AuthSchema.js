@@ -27,4 +27,8 @@ export const editSchema = object({
   firstName: string().required('Please tell us your first name'),
   lastName: string().required('Please tell us your last name'),
   description: string()
-})
+});
+
+export const addSchema = object({
+  description: string()
+});

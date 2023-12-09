@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import styles from "./PostPage.module.css";
 import { ProfileDetailsInput } from "../ProfilePage/components/ProfileDetailsInput/ProfileDetailsInput";
 import { Button } from "../../components/Button/Button";
@@ -10,6 +10,7 @@ export const PostPage = () => {
     const [postUser, setPostUser] = useState(null);
     const [comments, setComments] = useState(null);
     const { id } = useParams();
+    const navigate = useNavigate()
 
     const { user } = useAuthContext();
 
@@ -43,6 +44,17 @@ export const PostPage = () => {
         getData();
     }, []);
 
+    const handleDelete = async () => {
+        try {
+            await fetch(`http://localhost:3000/posts/${post.id}`, {
+                method: 'DELETE',
+            })
+            navigate("/");
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     return (
         <div className={styles.postPageContainer}>
             {post && comments && postUser &&
@@ -50,7 +62,7 @@ export const PostPage = () => {
                 {user && postUser.id === user.id &&
                 <div className={styles.actionButtons}>
                     <Button text="Edit" />
-                    <Button text="Delete" />
+                    <Button text="Delete" onClick={handleDelete} />
                 </div>}
                 <img src={post.image} alt="Not Found" className={styles.postImage} />
                 <p className={styles.postAuthor}>By {postUser.firstName} {postUser.lastName}</p>

@@ -14,8 +14,7 @@ export const HomePage = () => {
                 const data = res.json();
                 return data;
             })
-            setPosts(data);
-            console.log(data);
+            setPosts(data.reverse());
         }
         getData()
     }, []);

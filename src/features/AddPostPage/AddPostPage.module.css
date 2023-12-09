@@ -1,0 +1,15 @@
+.addPostContainer {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.addPostContainer .addPostForm {
+    width: 50%;
+}
+
+.addPostContainer .addPostForm .addPostTitle {
+    padding-bottom: 0.5rem;
+    margin-bottom: 4rem;
+    border-bottom: 2px solid var(--neutral-green);
+}

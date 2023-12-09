@@ -9,6 +9,7 @@ import { AuthContextProvider } from './features/Auth/AuthContext';
 import { EditProfilePage } from './features/EditProfilePage/EditProfilePage';
 import { HomePage } from './features/HomePage/HomePage';
 import { PostPage } from "./features/PostPage/PostPage";
+import { AddPostPage } from './features/AddPostPage/AddPostPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="profile" element={<ProfilePage />} />
             <Route path="profile/edit" element={<EditProfilePage />} />
             <Route path="/posts/:id" element={<PostPage />} />
+            <Route path="addPost" element={<AddPostPage />} />
             <Route path="/" element={<HomePage />} />
             <Route path="*" element={<h1>Not Found</h1>} />
           </Routes>

@@ -2,30 +2,21 @@
   "users": [
     {
       "email": "mirabel.indolenicul@gmail.com",
-      "password": "$2a$10$ldFFZQHRA6x2cmSfaUVene3GjY8pegnTZQ3obQkVGkibN52/C6E9K",
-      "image": "blob:http://localhost:5173/240695f7-dd66-4b8b-8e82-6b980f1305a3",
-      "description": "I'm Mirabel",
+      "password": "$2a$10$FfJowGE6mndpzYgZWNXOSu4O5sdf16A3.RZVee3LzPwRtH92Epyc6",
+      "image": "/src/images/NoImageAvailable.jpg",
+      "description": "",
       "firstName": "Mirabel",
       "lastName": "Indolenicul",
       "id": 1
     },
     {
       "email": "mirel.baciu@gmail.com",
-      "password": "$2a$10$SO/4DpvTpKHGIPvwKHswUOq0YMOeCbfvGCrSBCCdaiIikCAhBhsPa",
+      "password": "$2a$10$c03R2IUgArU.vPo.yoFBOO6amaarx1bGdYm6OQ48jhiOV3ySkrCje",
       "image": "/src/images/NoImageAvailable.jpg",
       "description": "",
       "firstName": "Mirel",
-      "lastName": "Pop",
+      "lastName": "Baciu",
       "id": 2
-    },
-    {
-      "email": "pop@mail.com",
-      "password": "$2a$10$yWyhdY4c3eptKkKEyun17OUmq6Z6twAo585ZmLNHh.FGqOi.gQ21S",
-      "image": "blob:http://localhost:5173/0d78f51a-9ac4-42dd-8bad-c4894f8045c1",
-      "description": "I'm Mirel Baciu",
-      "firstName": "Ana",
-      "lastName": "Popa",
-      "id": 3
     }
   ],
   "posts": [
@@ -60,6 +51,30 @@
       ],
       "userId": 2,
       "id": 3
+    },
+    {
+      "image": "blob:http://localhost:5173/e1bb0f15-bdf5-4f56-9120-ee94d43e7468",
+      "description": "This is my post",
+      "likes": 0,
+      "commentsIds": [],
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "image": "blob:http://localhost:5173/42472f33-b761-4e1f-beb8-a7d4e2af8929",
+      "description": "THIS IS MY POST !!!!",
+      "likes": 0,
+      "commentsIds": [],
+      "userId": 2,
+      "id": 5
+    },
+    {
+      "image": "blob:http://localhost:5173/ae4ca874-3bae-4128-98f8-a00f82ccb115",
+      "description": "I'm Mirel Baciu",
+      "likes": 0,
+      "commentsIds": [],
+      "userId": 2,
+      "id": 6
     }
   ],
   "comments": [
