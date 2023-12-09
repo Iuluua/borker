@@ -32,3 +32,7 @@ export const editSchema = object({
 export const addSchema = object({
   description: string()
 });
+
+export const addCommentSchema = object({
+  comment: string().required("The comment is required")
+});

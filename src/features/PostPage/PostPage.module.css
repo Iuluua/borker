@@ -19,7 +19,8 @@
 .postContainer div,
 .postContainer label,
 .postContainer input,
-.postContainer button {
+.postContainer button,
+.postContainer p {
     background-color: var(--soft-white);
 }
 
@@ -37,6 +38,7 @@
     height: 20rem;
     border-radius: 0.5rem;
     border: 1px solid var(--neutral-green);
+    background-color: var(--soft-white);
 }
 
 .postContainer .postAuthor {
@@ -58,7 +60,7 @@
     grid-column: 2 / 3;
     grid-row: 2 / 4;
     background-color: var(--soft-white);
-    padding-top: 1rem;
+    padding-top: 0.5rem;
 }
 
 .postContainer .postComments p {
@@ -76,9 +78,16 @@
     background-color: var(--soft-white);
 }
 
+.postContainer .postComments button {
+    padding: 0.3rem;
+    margin-bottom: 0.5rem;
+    font-size: var(--font-size-sm);
+}
+
 .postContainer .addComment {
     display: flex;
     gap: 1.2rem;
+    background-color: var(--soft-white);
     align-items: center;
 }
 

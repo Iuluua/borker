@@ -24,6 +24,7 @@
       "image": "/src/images/NoImageAvailable.jpg",
       "description": "This is the first post",
       "likes": 0,
+      "userLikesIds": [],
       "commentsIds": [
         1,
         2
@@ -35,6 +36,7 @@
       "image": "/src/images/NoImageAvailable.jpg",
       "description": "This is the second post",
       "likes": 0,
+      "userLikesIds": [],
       "commentsIds": [
         3,
         4
@@ -45,7 +47,8 @@
     {
       "image": "/src/images/NoImageAvailable.jpg",
       "description": "This is the third post fshkjshdhskjghfkjdhhhhhhhhhhhhhhhhhhhhhhhh",
-      "likes": 0,
+      "likes": 2,
+      "userLikesIds": [],
       "commentsIds": [
         5
       ],
@@ -53,28 +56,13 @@
       "id": 3
     },
     {
-      "image": "blob:http://localhost:5173/e1bb0f15-bdf5-4f56-9120-ee94d43e7468",
-      "description": "This is my post",
+      "image": "blob:http://localhost:5173/59b40307-f30d-4b3b-9743-daf5407a4a34",
+      "description": "I'm Mirel Baciu",
       "likes": 0,
+      "userLikesIds": [],
       "commentsIds": [],
       "userId": 1,
       "id": 4
-    },
-    {
-      "image": "blob:http://localhost:5173/42472f33-b761-4e1f-beb8-a7d4e2af8929",
-      "description": "THIS IS MY POST !!!!",
-      "likes": 0,
-      "commentsIds": [],
-      "userId": 2,
-      "id": 5
-    },
-    {
-      "image": "blob:http://localhost:5173/ae4ca874-3bae-4128-98f8-a00f82ccb115",
-      "description": "I'm Mirel Baciu",
-      "likes": 0,
-      "commentsIds": [],
-      "userId": 2,
-      "id": 6
     }
   ],
   "comments": [
