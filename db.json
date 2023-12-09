@@ -21,11 +21,14 @@
   ],
   "posts": [
     {
-      "image": "/src/images/NoImageAvailable.jpg",
+      "image": "blob:http://localhost:5173/7d880f52-580a-4c74-8da0-74d47cf9d0dd",
       "description": "This is the first post",
-      "likes": 0,
-      "userLikesIds": [],
+      "likes": 1,
+      "userLikesIds": [
+        1
+      ],
       "commentsIds": [
+        7,
         1,
         2
       ],
@@ -50,19 +53,22 @@
       "likes": 2,
       "userLikesIds": [],
       "commentsIds": [
+        6,
         5
       ],
       "userId": 2,
       "id": 3
     },
     {
-      "image": "blob:http://localhost:5173/59b40307-f30d-4b3b-9743-daf5407a4a34",
-      "description": "I'm Mirel Baciu",
+      "image": "blob:http://localhost:5173/ed1aa957-bae4-4a72-bfbb-324b29f53bb2",
+      "description": "I'm Mirabel",
       "likes": 0,
       "userLikesIds": [],
-      "commentsIds": [],
+      "commentsIds": [
+        8
+      ],
       "userId": 1,
-      "id": 4
+      "id": 5
     }
   ],
   "comments": [
@@ -90,6 +96,21 @@
       "text": "This is my comment - 5",
       "userId": 1,
       "id": 5
+    },
+    {
+      "text": "It looks great!!!",
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "text": "It looks great!!!",
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "text": "It looks great!!!",
+      "userId": 1,
+      "id": 8
     }
   ]
 }

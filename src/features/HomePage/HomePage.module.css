@@ -24,6 +24,7 @@
 .postsContainer .postsItem .postsImage {
     border-radius: 0.7rem;
     height: 15rem;
+    width: 15rem;
     border: 1px solid var(--neutral-green);
     background-color: var(--soft-white);
 }

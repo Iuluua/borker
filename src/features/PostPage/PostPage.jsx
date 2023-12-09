@@ -162,7 +162,7 @@ export const PostPage = () => {
             <div className={styles.postContainer}>
                 {user && postUser.id === user.id &&
                 <div className={styles.actionButtons}>
-                    <Button text="Edit" />
+                    <Button text="Edit" onClick={() => navigate(`/posts/edit/${id}`)} />
                     <Button text="Delete" onClick={handleDelete} />
                 </div>}
                 <img src={post.image} alt="Not Found" className={styles.postImage} />

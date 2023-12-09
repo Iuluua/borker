@@ -36,6 +36,7 @@
     grid-column: 1 / 2;
     grid-row: 1 / 3;
     height: 20rem;
+    width: 20rem;
     border-radius: 0.5rem;
     border: 1px solid var(--neutral-green);
     background-color: var(--soft-white);
