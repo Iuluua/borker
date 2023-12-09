@@ -3,7 +3,7 @@
     {
       "email": "mirabel.indolenicul@gmail.com",
       "password": "$2a$10$ldFFZQHRA6x2cmSfaUVene3GjY8pegnTZQ3obQkVGkibN52/C6E9K",
-      "image": "blob:http://localhost:5173/d663b285-9bc4-46df-ab8b-3ce54f25dbee",
+      "image": "blob:http://localhost:5173/240695f7-dd66-4b8b-8e82-6b980f1305a3",
       "description": "I'm Mirabel",
       "firstName": "Mirabel",
       "lastName": "Indolenicul",
@@ -17,6 +17,15 @@
       "firstName": "Mirel",
       "lastName": "Pop",
       "id": 2
+    },
+    {
+      "email": "pop@mail.com",
+      "password": "$2a$10$yWyhdY4c3eptKkKEyun17OUmq6Z6twAo585ZmLNHh.FGqOi.gQ21S",
+      "image": "blob:http://localhost:5173/0d78f51a-9ac4-42dd-8bad-c4894f8045c1",
+      "description": "I'm Mirel Baciu",
+      "firstName": "Ana",
+      "lastName": "Popa",
+      "id": 3
     }
   ],
   "posts": [
@@ -24,7 +33,10 @@
       "image": "/src/images/NoImageAvailable.jpg",
       "description": "This is the first post",
       "likes": 0,
-      "commentsIds": [1, 2],
+      "commentsIds": [
+        1,
+        2
+      ],
       "userId": 1,
       "id": 1
     },
@@ -32,7 +44,10 @@
       "image": "/src/images/NoImageAvailable.jpg",
       "description": "This is the second post",
       "likes": 0,
-      "commentsIds": [3, 4],
+      "commentsIds": [
+        3,
+        4
+      ],
       "userId": 2,
       "id": 2
     },
@@ -40,7 +55,9 @@
       "image": "/src/images/NoImageAvailable.jpg",
       "description": "This is the third post fshkjshdhskjghfkjdhhhhhhhhhhhhhhhhhhhhhhhh",
       "likes": 0,
-      "commentsIds": [5],
+      "commentsIds": [
+        5
+      ],
       "userId": 2,
       "id": 3
     }

@@ -1,0 +1,88 @@
+.postPageContainer {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.postContainer {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-rows: 3rem auto auto auto;
+    width: 60%;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background-color: var(--soft-white);
+    border: 2px solid var(--neutral-green);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.postContainer div,
+.postContainer label,
+.postContainer input,
+.postContainer button {
+    background-color: var(--soft-white);
+}
+
+.postContainer .actionButtons {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.postContainer .postImage {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    height: 20rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--neutral-green);
+}
+
+.postContainer .postAuthor {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    background-color: var(--soft-white);
+}
+
+.postContainer .postDescription {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    align-self: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--neutral-green);
+    background-color: var(--soft-white);
+}
+
+.postContainer .postComments {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    background-color: var(--soft-white);
+    padding-top: 1rem;
+}
+
+.postContainer .postComments p {
+    padding: 0.5rem;
+    margin-bottom: 0.7rem;
+    border-radius: 0.3rem;
+    border: 1px solid var(--neutral-green);
+}
+
+.postContainer .postComments li {
+    list-style-type: none;
+}
+
+.postContainer .postComments p {
+    background-color: var(--soft-white);
+}
+
+.postContainer .addComment {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.postContainer .addComment > div {
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+}

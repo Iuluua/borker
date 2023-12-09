@@ -4,6 +4,7 @@
     justify-content: flex-start;
     gap: 1rem;
     background-color: var(--neutral-green);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
     & a {
         color: black;
