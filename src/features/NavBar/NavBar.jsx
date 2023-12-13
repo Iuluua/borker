@@ -11,7 +11,7 @@ export const NavBar = () => {
         <nav className={styles.navBarContainer}>
             <NavLink 
                 to="/" 
-                className={({ isActive }) => isActive && styles.active}
+                className={({ isActive }) => isActive ? styles.active : undefined}
             >
                 Home
             </NavLink>
@@ -26,7 +26,7 @@ export const NavBar = () => {
                 </NavLink>
                 <NavLink 
                     to="register" 
-                    className={({ isActive }) => isActive && styles.active}
+                    className={({ isActive }) => isActive ? styles.active : undefined}
                 >
                     Register
                 </NavLink>
@@ -37,7 +37,7 @@ export const NavBar = () => {
                     Welcome, 
                     <NavLink 
                         to="profile" 
-                        className={({ isActive }) => isActive && styles.active}
+                        className={({ isActive }) => isActive ? styles.active : undefined}
                     >
                         {user.firstName}
                     </NavLink>

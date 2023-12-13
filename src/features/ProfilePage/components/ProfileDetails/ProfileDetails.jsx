@@ -14,7 +14,7 @@ export const ProfileDetails = () => {
     return (
         <form>
             {Object.keys(user).map(key => {
-                if (user[key] && key !== "id" && key !== "image") {
+                if (user[key] && key !== "id" && key !== "image" && key !== "likedPostsIds") {
                     return (
                         <ProfileDetailsInput 
                             key={user[key]}
