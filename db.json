@@ -19,7 +19,7 @@
       "image": "/src/images/NoImageAvailable.jpg",
       "description": "",
       "likedPostsIds": [
-        2
+        1
       ],
       "firstName": "Mirel",
       "lastName": "Baciu",
@@ -30,7 +30,7 @@
     {
       "image": "/src/images/NoImageAvailable.jpg",
       "description": "I'm Mirabel",
-      "likes": 1,
+      "likes": 2,
       "commentsIds": [
         1
       ],
@@ -40,7 +40,7 @@
     {
       "image": "/src/images/NoImageAvailable.jpg",
       "description": "I'm Mirel Baciu",
-      "likes": 2,
+      "likes": 1,
       "commentsIds": [
         2
       ],

@@ -89,6 +89,13 @@ export const PostPage = () => {
     }
 
     const onSubmit = async (values) => {
+        if (!user) {
+            toast.error('You must log in first', {
+                position: toast.POSITION.BOTTOM_RIGHT,
+            });
+            return;
+        } 
+
         const dataForServer = {
             text: values.comment,
             userId: user.id
