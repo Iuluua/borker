@@ -50,7 +50,7 @@
       "id": 2
     },
     {
-      "image": "blob:http://localhost:5173/326c865c-6dfd-40d8-8452-758f0c7521dc",
+      "image": "/src/images/NoImageAvailable.jpg",
       "description": "This is my post",
       "likes": 2,
       "commentsIds": [],
