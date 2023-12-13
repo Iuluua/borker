@@ -6,6 +6,7 @@
       "image": "/src/images/NoImageAvailable.jpg",
       "description": "I am Mirabel",
       "likedPostsIds": [
+        3,
         2,
         1
       ],
@@ -19,6 +20,7 @@
       "image": "/src/images/NoImageAvailable.jpg",
       "description": "",
       "likedPostsIds": [
+        3,
         1
       ],
       "firstName": "Mirel",
@@ -46,6 +48,14 @@
       ],
       "userId": 2,
       "id": 2
+    },
+    {
+      "image": "blob:http://localhost:5173/326c865c-6dfd-40d8-8452-758f0c7521dc",
+      "description": "This is my post",
+      "likes": 2,
+      "commentsIds": [],
+      "userId": 1,
+      "id": 3
     }
   ],
   "comments": [
