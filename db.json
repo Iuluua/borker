@@ -2,18 +2,25 @@
   "users": [
     {
       "email": "mirabel.indolenicul@gmail.com",
-      "password": "$2a$10$FfJowGE6mndpzYgZWNXOSu4O5sdf16A3.RZVee3LzPwRtH92Epyc6",
+      "password": "$2a$10$LT6ycrfBUmiKRaZhaToG4OnauUusJzCLzhfW8Xb7wpKPtusMJkLgy",
       "image": "/src/images/NoImageAvailable.jpg",
       "description": "",
+      "likedPostsIds": [
+        2,
+        1
+      ],
       "firstName": "Mirabel",
       "lastName": "Indolenicul",
       "id": 1
     },
     {
       "email": "mirel.baciu@gmail.com",
-      "password": "$2a$10$c03R2IUgArU.vPo.yoFBOO6amaarx1bGdYm6OQ48jhiOV3ySkrCje",
+      "password": "$2a$10$AK.KGr72BVLhp.FnkA7KU.RIl4lDLoWZpzUbEzpGVq3wVsK297EPu",
       "image": "/src/images/NoImageAvailable.jpg",
       "description": "",
+      "likedPostsIds": [
+        2
+      ],
       "firstName": "Mirel",
       "lastName": "Baciu",
       "id": 2
@@ -21,96 +28,36 @@
   ],
   "posts": [
     {
-      "image": "blob:http://localhost:5173/7d880f52-580a-4c74-8da0-74d47cf9d0dd",
-      "description": "This is the first post",
+      "image": "/src/images/NoImageAvailable.jpg",
+      "description": "I'm Mirabel",
       "likes": 1,
-      "userLikesIds": [
-        1
-      ],
       "commentsIds": [
-        7,
-        1,
-        2
+        1
       ],
       "userId": 1,
       "id": 1
     },
     {
       "image": "/src/images/NoImageAvailable.jpg",
-      "description": "This is the second post",
-      "likes": 0,
-      "userLikesIds": [],
+      "description": "I'm Mirel Baciu",
+      "likes": 2,
       "commentsIds": [
-        3,
-        4
+        2
       ],
       "userId": 2,
       "id": 2
-    },
-    {
-      "image": "/src/images/NoImageAvailable.jpg",
-      "description": "This is the third post fshkjshdhskjghfkjdhhhhhhhhhhhhhhhhhhhhhhhh",
-      "likes": 2,
-      "userLikesIds": [],
-      "commentsIds": [
-        6,
-        5
-      ],
-      "userId": 2,
-      "id": 3
-    },
-    {
-      "image": "blob:http://localhost:5173/ed1aa957-bae4-4a72-bfbb-324b29f53bb2",
-      "description": "I'm Mirabel",
-      "likes": 0,
-      "userLikesIds": [],
-      "commentsIds": [
-        8
-      ],
-      "userId": 1,
-      "id": 5
     }
   ],
   "comments": [
     {
-      "text": "This is my comment - 1",
-      "userId": 2,
+      "text": "It looks great!!!",
+      "userId": 1,
       "id": 1
     },
     {
-      "text": "This is my comment - 2",
-      "userId": 2,
+      "text": "I love it!",
+      "userId": 1,
       "id": 2
-    },
-    {
-      "text": "This is my comment - 3",
-      "userId": 1,
-      "id": 3
-    },
-    {
-      "text": "This is my comment - 4",
-      "userId": 1,
-      "id": 4
-    },
-    {
-      "text": "This is my comment - 5",
-      "userId": 1,
-      "id": 5
-    },
-    {
-      "text": "It looks great!!!",
-      "userId": 1,
-      "id": 6
-    },
-    {
-      "text": "It looks great!!!",
-      "userId": 1,
-      "id": 7
-    },
-    {
-      "text": "It looks great!!!",
-      "userId": 1,
-      "id": 8
     }
   ]
 }

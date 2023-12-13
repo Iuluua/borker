@@ -16,7 +16,7 @@ export const EditProfilePage = () => {
         resolver: yupResolver(editSchema),
     });
 
-    const { user, logout } = useAuthContext();
+    const { user, logout, login } = useAuthContext();
 
     const navigate = useNavigate();
 
@@ -38,6 +38,8 @@ export const EditProfilePage = () => {
         })
         console.log(data);
         logout();
+        // login(data);
+        // navigate("/profile")
         navigate("/login");
     }
 

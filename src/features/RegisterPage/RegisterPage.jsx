@@ -19,7 +19,7 @@ export const RegisterPage = () => {
 
     const onSubmit = async (values) => {
         const { confirmPassword, ...dataToSend } = values;
-        const dataForServer = {image: noImageAvailable, description: "", ...dataToSend};
+        const dataForServer = {image: noImageAvailable, description: "", likedPostsIds: [], ...dataToSend};
         
         const data = await fetch(
             "http://localhost:3000/register",

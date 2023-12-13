@@ -7,12 +7,15 @@ import { useAuthContext } from "../Auth/AuthContext";
 import { addCommentSchema } from "../RegisterPage/AuthSchema";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
+import { ToastContainer, toast } from "react-toastify";
 
 export const PostPage = () => {
     const [post, setPost] = useState(null);
     const [postUser, setPostUser] = useState(null);
     const [comments, setComments] = useState(null);
     const [likes, setLikes] = useState(null);
+    const [isLiked, setIsLiked] = useState(null);
+    const [updatedUser, setUpdatedUser] = useState(null);
     const { id } = useParams();
     const navigate = useNavigate();
     const {
@@ -34,10 +37,7 @@ export const PostPage = () => {
             })
 
             setPost(post);
-            setLikes({
-                number: post.likes,
-                liked: false
-            });
+            setLikes(post.likes);
 
             const comments = post.commentsIds.map(async id => {
                 const data = await fetch(`http://localhost:3000/comments/${id}`)
@@ -48,14 +48,26 @@ export const PostPage = () => {
             const commentsForUi = await Promise.all(comments);
             setComments(commentsForUi);
 
-            const user =  await fetch(`http://localhost:3000/users/${post.userId}`)
+            const postUser =  await fetch(`http://localhost:3000/users/${post.userId}`)
             .then(async (res) => {
                 const data = res.json();
                 return data;
             })
 
-            setPostUser(user);
+            setPostUser(postUser);
+
+            if (user) {
+                const updatedUser = await fetch(`http://localhost:3000/users/${user.id}`)
+                .then(async (res) => {
+                    const data = res.json();
+                    return data;
+                })
+            
+                setIsLiked(updatedUser.likedPostsIds.includes(post.id))
+                setUpdatedUser(updatedUser)
+            }
         }
+
         getData();
     }, []);
 
@@ -111,23 +123,24 @@ export const PostPage = () => {
     }
 
     const handleLike = async () => {
-        // if (!likes.liked && post.userLikesIds.includes(user.id)) {
-        //     await fetch(
-        //         `http://localhost:3000/posts/${post.id}`,
-        //         {
-        //             method: 'PATCH',
-        //             headers: {
-        //                 'Content-type': 'application/json',
-        //             },
-        //             body: JSON.stringify({likes: likes.number - 1, userLikesIds: [...post.userLikesIds.filter(userId => userId !== user.id)]}),
-        //         }
-        //     );
+        if (!user) {
+            toast.error('You must log in first', {
+                position: toast.POSITION.BOTTOM_RIGHT,
+            });
+            return;
+        }
 
-        //     setLikes({number: likes.number - 1, liked: false});
-        //     return;
-        // }
-
-        if (!likes.liked) {
+        if (!isLiked) {
+            await fetch(
+                `http://localhost:3000/users/${user.id}`,
+                {
+                    method: 'PATCH',
+                    headers: {
+                        'Content-type': 'application/json',
+                    },
+                    body: JSON.stringify({likedPostsIds: [post.id, ...updatedUser.likedPostsIds]}),
+                }
+            );
             await fetch(
                 `http://localhost:3000/posts/${post.id}`,
                 {
@@ -135,29 +148,40 @@ export const PostPage = () => {
                     headers: {
                         'Content-type': 'application/json',
                     },
-                    body: JSON.stringify({likes: likes.number + 1, userLikesIds: [user.id, ...post.userLikesIds]}),
+                    body: JSON.stringify({likes: likes + 1}),
                 }
             );
-
-            setLikes({number: likes.number + 1, liked: true});
+            setLikes(likes + 1);
+            setIsLiked(true);
         } else {
             await fetch(
+                `http://localhost:3000/users/${user.id}`,
+                {
+                    method: 'PATCH',
+                    headers: {
+                        'Content-type': 'application/json',
+                    },
+                    body: JSON.stringify({likedPostsIds: [...updatedUser.likedPostsIds.filter(postId => postId !== post.id)]}),
+                }
+            );
+            await fetch(
                 `http://localhost:3000/posts/${post.id}`,
                 {
                     method: 'PATCH',
                     headers: {
                         'Content-type': 'application/json',
                     },
-                    body: JSON.stringify({likes: likes.number - 1, userLikesIds: [...post.userLikesIds.filter(userId => userId !== user.id)]}),
+                    body: JSON.stringify({likes: likes - 1}),
                 }
             );
-
-            setLikes({number: likes.number - 1, liked: false});
+            setLikes(likes - 1);
+            setIsLiked(false);
         }
     }
 
     return (
         <div className={styles.postPageContainer}>
+            <ToastContainer />
             {post && comments && postUser &&
             <div className={styles.postContainer}>
                 {user && postUser.id === user.id &&
@@ -170,7 +194,7 @@ export const PostPage = () => {
                 <p className={styles.postDescription}>{post.description}</p>
                 <div>
                     <ul className={styles.postComments}>
-                        <Button text={likes.liked ? "Liked! " + likes.number : "Like " + likes.number} onClick={handleLike} />
+                        <Button text={isLiked ? "Liked! " + likes : "Like " + likes} onClick={handleLike} />
                         {comments.map(comment => (
                             <li key={comment.id}>
                                 <p>{comment.text}</p>

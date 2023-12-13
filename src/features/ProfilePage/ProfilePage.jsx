@@ -9,19 +9,23 @@ export const ProfilePage = () => {
     const navigate = useNavigate();
 
     return (
-        <div className={styles.profilePageContainer}>
-            <img 
-                src={user.image} 
-                alt="Not Found" 
-                className={styles.profilePicture} 
-            />
-            <h1>{user.firstName}</h1>
-            <Button text="Add Post" onClick={() => navigate("/addPost")} />
-            <div className={styles.profileDetails}>
-                <p>Personal Information</p>
-                <ProfileDetails />
-                <Button text="Edit" onClick={() => navigate("/profile/edit")} />
-            </div>
-        </div>
+        <>
+            {user &&
+            <div className={styles.profilePageContainer}>
+                <img 
+                    src={user.image} 
+                    alt="Not Found" 
+                    className={styles.profilePicture} 
+                />
+                <h1>{user.firstName}</h1>
+                <Button text="Add Post" onClick={() => navigate("/addPost")} />
+                <div className={styles.profileDetails}>
+                    <p>Personal Information</p>
+                    <ProfileDetails />
+                    <Button text="Edit" onClick={() => navigate("/profile/edit")} />
+                </div>
+            </div>}
+            {!user && <h1>Buffering...</h1>}
+        </>
     );
 }

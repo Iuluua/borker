@@ -25,7 +25,6 @@ export const AddPostPage = () => {
             image: URL.createObjectURL(values.image[0]),
             description: values.description,
             likes: 0,
-            userLikesIds: [],
             commentsIds: [],
             userId: user.id
         }
